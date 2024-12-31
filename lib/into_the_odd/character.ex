@@ -1,12 +1,34 @@
 defmodule IntoTheOdd.Character do
+  alias IntoTheOdd.Arcana
+  alias IntoTheOdd.StartingPackage
+  alias IntoTheOdd.Weapon
+
   @enforce_keys [:name]
-  defstruct [:name, :stats, :hp]
+  defstruct [:name, :stats, :hp, :arcana, :weapons, :traits, :items]
 
   def new(name) do
+    stats = generate_stats()
+    hp = roll_hp()
+
+    high_stat = get_highest_stat(stats)
+    starting_package = StartingPackage.get_starting_package(high_stat.val, hp)
+    weapons = parse_weapons(starting_package["weapons"])
+
+    arcana =
+      if starting_package["arcana"] do
+        Arcana.get_arcana()
+      else
+        nil
+      end
+
     %__MODULE__{
       name: name,
-      stats: generate_stats(),
-      hp: roll_hp()
+      arcana: arcana,
+      hp: hp,
+      items: starting_package["items"],
+      stats: stats,
+      traits: starting_package["traits"],
+      weapons: weapons
     }
   end
 
@@ -36,5 +58,13 @@ defmodule IntoTheOdd.Character do
 
   defp roll_hp do
     Enum.random(1..6)
+  end
+
+  def get_highest_stat(stats) do
+    Enum.max_by(stats, & &1.val)
+  end
+
+  def parse_weapons(weapons) do
+    Enum.map(weapons, &Weapon.get_weapon(&1))
   end
 end
