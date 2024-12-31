@@ -51,7 +51,7 @@ defmodule IntoTheOddWeb.CharacterHTML do
     ~H"""
     <div>
       <h3>Arcana</h3>
-      <p>{@arcana.name}: {@arcana.description}</p>
+      <p>{@arcana["name"]}: {@arcana["description"]}</p>
     </div>
     """
   end
@@ -70,9 +70,9 @@ defmodule IntoTheOddWeb.CharacterHTML do
         </tr>
         <%= for weapon <- @weapons do %>
           <tr>
-            <td><strong>{weapon.name}</strong></td>
-            <td>{weapon.damage}</td>
-            <td><em>{weapon.tags}</em></td>
+            <td><strong>{weapon["name"]}</strong></td>
+            <td>{weapon["damage"]}</td>
+            <td><em>{weapon["tags"]}</em></td>
           </tr>
         <% end %>
       </table>

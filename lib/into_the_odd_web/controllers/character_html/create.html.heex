@@ -1,13 +1,21 @@
 <section>
   <.greet name={@character.name} />
 
+  <hr>
   <.list_stats stats={@character.stats} />
 
+  <hr>
   <.hp hp={@character.hp} />
 
-  <.list_traits traits={@character.traits} />
+  <hr>
+  <.list_traits :if={@character.traits != []} traits={@character.traits} />
 
-  <.arcana traits={@character.arcana} />
+  <hr>
+  <.arcana :if={@character.arcana} arcana={@character.arcana} />
 
-  <.list_weapons traits={@character.weapons} />
+  <hr>
+  <.list_items :if={@character.items != []} items={@character.items} />
+
+  <hr>
+  <.list_weapons weapons={@character.weapons} />
 </section>
