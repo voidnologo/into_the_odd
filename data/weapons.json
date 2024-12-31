@@ -1,0 +1,188 @@
+{
+   "acid": {
+      "name": "Acid",
+      "damage": "d6 Damage, burns through most materials.",
+      "tags": []
+   },
+   "baton": {
+      "name": "Baton",
+      "damage": "d6",
+      "tags": []
+   },
+   "blunderbuss": {
+      "name": "Blunderbuss",
+      "damage": "d8",
+      "tags": [
+         "Bulky"
+      ]
+   },
+   "bomb": {
+      "name": "Bomb",
+      "damage": "d10",
+      "tags": [
+         "Blast"
+      ]
+   },
+   "bow": {
+      "name": "Bow",
+      "damage": "d6",
+      "tags": [
+         "Bulky"
+      ]
+   },
+   "brace of pistols": {
+      "name": "Brace of Pistols",
+      "damage": "d8",
+      "tags": [
+         "Bulky"
+      ]
+   },
+   "cane": {
+      "name": "Cane",
+      "damage": "d6",
+      "tags": []
+   },
+   "claymore": {
+      "name": "Claymore",
+      "damage": "d8",
+      "tags": [
+         "Bulky"
+      ]
+   },
+   "club": {
+      "name": "Club",
+      "damage": "d6",
+      "tags": []
+   },
+   "ether": {
+      "name": "Ether",
+      "damage": "Inhaled, STR Save or pass out for an hour.",
+      "tags": []
+   },
+   "fire oil": {
+      "name": "Fire Oil",
+      "damage": "Sets an area alight.  All inside take d6 Damage each round.",
+      "tags": []
+   },
+   "flashbang": {
+      "name": "Flashbang",
+      "damage": "Momentarily blinds anyone that fails a DEX Save.",
+      "tags": []
+   },
+   "garotte": {
+      "name": "Garotte",
+      "damage": "d6",
+      "tags": []
+   },
+   "halberd": {
+      "name": "Halberd",
+      "damage": "d8",
+      "tags": [
+         "Bulky"
+      ]
+   },
+   "harpoon gun": {
+      "name": "Harpoon Gun",
+      "damage": "d8",
+      "tags": [
+         "Bulky"
+      ]
+   },
+   "hatchet": {
+      "name": "Hatchet",
+      "damage": "d6",
+      "tags": []
+   },
+   "knife": {
+      "name": "Knife",
+      "damage": "d6",
+      "tags": []
+   },
+   "longaxe": {
+      "name": "Longaxe",
+      "damage": "d8",
+      "tags": [
+         "Bulky"
+      ]
+   },
+   "mace": {
+      "name": "Mace",
+      "damage": "d6",
+      "tags": []
+   },
+   "machete": {
+      "name": "Machete",
+      "damage": "d6",
+      "tags": []
+   },
+   "maul": {
+      "name": "Maul",
+      "damage": "d8",
+      "tags": [
+         "Bulky"
+      ]
+   },
+   "musket": {
+      "name": "Musket",
+      "damage": "d8",
+      "tags": [
+         "Bulky"
+      ]
+   },
+   "pick-axe": {
+      "name": "Pick-Axe",
+      "damage": "d6",
+      "tags": []
+   },
+   "pistol": {
+      "name": "Pistol",
+      "damage": "d6",
+      "tags": []
+   },
+   "poison": {
+      "name": "Poison",
+      "damage": "Lose d20 stR if consumed.",
+      "tags": []
+   },
+   "rifle": {
+      "name": "Rifle",
+      "damage": "d8",
+      "tags": [
+         "Bulky"
+      ]
+   },
+   "rocket": {
+      "name": "Rocket",
+      "damage": "d10 and colorful explosion.",
+      "tags": []
+   },
+   "smoke bomb": {
+      "name": "Smoke-bomb",
+      "damage": "Fills a room with smoke when lit. Attacks through the smoke are Impaired.",
+      "tags": []
+   },
+   "staff": {
+      "name": "Staff",
+      "damage": "d6",
+      "tags": [
+         "Bulky"
+      ]
+   },
+   "sword and dagger": {
+      "name": "Sword and Dagger",
+      "damage": "d8",
+      "tags": [
+         "Bulky"
+      ]
+   },
+   "sword": {
+      "name": "Sword",
+      "damage": "d6",
+      "tags": []
+   },
+   "whip": {
+      "name": "Whip",
+      "damage": "d6",
+      "tags": []
+   }
+}
