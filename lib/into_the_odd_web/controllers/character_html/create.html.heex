@@ -1,9 +1,7 @@
 <section>
-  <div>
-    <.greet name={@name} />
-  </div>
+  <.greet name={@character.name} />
 
-  <div>
-    <.list_stats stats={@stats} />
-  </div>
+  <.list_stats stats={@character.stats} />
+
+  <.hp hp={@character.hp} />
 </section>

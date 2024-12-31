@@ -16,11 +16,30 @@ defmodule IntoTheOddWeb.CharacterHTML do
   def list_stats(assigns) do
     ~H"""
     <div>
-      <ul>
-        <li :for={stat <- @stats}>
-          <strong>{stat.label}:</strong> {stat.val} - <em>{stat.description}</em>
-        </li>
-      </ul>
+      <table>
+        <tr>
+          <th>Stat</th>
+          <th>Score</th>
+          <th>Description</th>
+        </tr>
+        <%= for stat <- @stats do %>
+          <tr>
+            <td><strong>{stat.label}</strong></td>
+            <td>{stat.val}</td>
+            <td><em>{stat.description}</em></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+    """
+  end
+
+  attr :hp, :integer, required: true
+
+  def hp(assigns) do
+    ~H"""
+    <div>
+      <strong>HP:</strong> {@hp}
     </div>
     """
   end
