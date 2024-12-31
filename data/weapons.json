@@ -141,7 +141,7 @@
    },
    "poison": {
       "name": "Poison",
-      "damage": "Lose d20 stR if consumed.",
+      "damage": "Lose d20 STR if consumed.",
       "tags": []
    },
    "rifle": {
@@ -177,6 +177,16 @@
    },
    "sword": {
       "name": "Sword",
+      "damage": "d6",
+      "tags": []
+   },
+   "throwing knives": {
+      "name": "Throwing Knives",
+      "damage": "d6",
+      "tags": []
+   },
+   "throwing axes": {
+      "name": "Throwing Axes",
       "damage": "d6",
       "tags": []
    },

@@ -1,10 +1,10 @@
 defmodule IntoTheOdd.Arcana do
-  alias Jason
+  alias IntoTheOdd.Utils
 
-  def get_json(filename) do
-    with {:ok, body} <- File.read(filename),
-         {:ok, json} <- Jason.decode(body) do
-      {:ok, json}
-    end
+
+  @data_file "data/arcana.json"
+
+  def load_data do
+    {:ok, data} <- Utils.get_json(@data_file),
   end
 end
