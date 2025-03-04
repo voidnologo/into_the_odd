@@ -7,8 +7,8 @@ defmodule IntoTheOddWeb.CharacterHTML do
 
   def greet(assigns) do
     ~H"""
-    <div class="p-3 bg-parchment border-2 border-gray-700 rounded-sm mb-3 font-special-elite text-gray-900 shadow-sm">
-      <h2 class="text-2xl font-bold tracking-wide">
+    <div class="p-3 mb-3 font-special-elite text-gray-900">
+      <h2 class="text-2xl font-bold tracking-wide border-b border-gray-600 pb-1">
         Greetings, <span class="underline decoration-wavy decoration-gray-600"><%= @name %></span>!
       </h2>
     </div>
@@ -19,8 +19,8 @@ defmodule IntoTheOddWeb.CharacterHTML do
 
   def list_stats(assigns) do
     ~H"""
-    <div class="p-3 bg-parchment border-2 border-gray-700 rounded-sm mb-3 font-special-elite text-gray-900 shadow-sm">
-      <h3 class="text-lg font-bold mb-2 tracking-wide">Stats</h3>
+    <div class="p-3 mb-3 font-special-elite text-gray-900">
+      <h3 class="text-lg font-bold mb-2 tracking-wide border-b border-gray-600 pb-1">Stats</h3>
       <table class="w-full border-collapse">
         <tr class="border-b border-gray-600">
           <th class="text-left p-1">Stat</th>
@@ -43,8 +43,9 @@ defmodule IntoTheOddWeb.CharacterHTML do
 
   def hp(assigns) do
     ~H"""
-    <div class="p-3 bg-parchment border-2 border-gray-700 rounded-sm mb-3 font-special-elite text-gray-900 shadow-sm">
-      <strong class="text-lg font-bold tracking-wide">HP:</strong> <span class="text-lg">{@hp}</span>
+    <div class="p-3 mb-3 font-special-elite text-gray-900">
+      <strong class="text-lg font-bold tracking-wide border-b border-gray-600 pb-1">HP:</strong>
+      <span class="text-lg">{@hp}</span>
     </div>
     """
   end
@@ -53,8 +54,8 @@ defmodule IntoTheOddWeb.CharacterHTML do
 
   def arcana(assigns) do
     ~H"""
-    <div class="p-3 bg-parchment border-2 border-gray-700 rounded-sm mb-3 font-special-elite text-gray-900 shadow-sm">
-      <h3 class="text-lg font-bold mb-2 tracking-wide">Arcana</h3>
+    <div class="p-3 mb-3 font-special-elite text-gray-900">
+      <h3 class="text-lg font-bold mb-2 tracking-wide border-b border-gray-600 pb-1">Arcana</h3>
       <p>
         <strong>{@arcana["name"]}:</strong>
         <span class="tracking-tight">{@arcana["description"]}</span>
@@ -67,8 +68,8 @@ defmodule IntoTheOddWeb.CharacterHTML do
 
   def list_weapons(assigns) do
     ~H"""
-    <div class="p-3 bg-parchment border-2 border-gray-700 rounded-sm mb-3 font-special-elite text-gray-900 shadow-sm">
-      <h3 class="text-lg font-bold mb-2 tracking-wide">Weapons</h3>
+    <div class="p-3 mb-3 font-special-elite text-gray-900">
+      <h3 class="text-lg font-bold mb-2 tracking-wide border-b border-gray-600 pb-1">Weapons</h3>
       <table class="w-full border-collapse">
         <tr class="border-b border-gray-600">
           <th class="text-left p-1">Name</th>
@@ -91,8 +92,8 @@ defmodule IntoTheOddWeb.CharacterHTML do
 
   def list_items(assigns) do
     ~H"""
-    <div class="p-3 bg-parchment border-2 border-gray-700 rounded-sm mb-3 font-special-elite text-gray-900 shadow-sm">
-      <h3 class="text-lg font-bold mb-2 tracking-wide">Items</h3>
+    <div class="p-3 mb-3 font-special-elite text-gray-900">
+      <h3 class="text-lg font-bold mb-2 tracking-wide border-b border-gray-600 pb-1">Items</h3>
       <div class="flex flex-col gap-1">
         <%= for item <- @items do %>
           <span class="tracking-tight">{item}</span>
@@ -106,8 +107,8 @@ defmodule IntoTheOddWeb.CharacterHTML do
 
   def list_traits(assigns) do
     ~H"""
-    <div class="p-3 bg-parchment border-2 border-gray-700 rounded-sm mb-3 font-special-elite text-gray-900 shadow-sm">
-      <h3 class="text-lg font-bold mb-2 tracking-wide">Traits</h3>
+    <div class="p-3 mb-3 font-special-elite text-gray-900">
+      <h3 class="text-lg font-bold mb-2 tracking-wide border-b border-gray-600 pb-1">Traits</h3>
       <div class="flex flex-col gap-1">
         <%= for trait <- @traits do %>
           <span class="tracking-tight">{trait}</span>

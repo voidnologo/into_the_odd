@@ -25,6 +25,22 @@ defmodule IntoTheOddWeb.Endpoint do
     gzip: false,
     only: IntoTheOddWeb.static_paths()
 
+  # Explicit static plug for /static
+  plug Plug.Static,
+    at: "/static",
+    from: :into_the_odd,
+    gzip: false,
+    only: ~w(images)
+
+  # Debug plug to log static requests
+  plug :debug_static
+
+  defp debug_static(conn, _) do
+    require Logger
+    Logger.debug("Static request: #{conn.request_path}")
+    conn
+  end
+
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
   if code_reloading? do

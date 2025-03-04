@@ -8,4 +8,28 @@
   .font-special-elite {
     font-family: 'Special Elite', monospace;
   }
+  .bg-grimy-parchment {
+    background-image: url('/static/images/parchment.jpg');
+    background-color: #d5d5c5; /* Lighter, greyer parchment base color */
+    background-blend-mode: soft-light; /* Softer blending for a faded look */
+    background-repeat: repeat;
+    background-size: 350px; /* Smaller repeat for denser texture */
+    position: relative; /* For pseudo-element overlay */
+    /* Brighten and fade the background image */
+    filter: brightness(1.1) saturate(0.3) contrast(0.95);
+  }
+  .bg-grimy-parchment::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.03); /* Lighter dark overlay for grime */
+    pointer-events: none; /* Allows interaction with content */
+  }
+  .parchment-shadow {
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3), /* Deeper shadow for torn effect */
+                inset 0 0 20px rgba(0, 0, 0, 0.15); /* Stronger curl effect */
+  }
 }
