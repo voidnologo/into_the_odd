@@ -7,7 +7,11 @@ defmodule IntoTheOddWeb.CharacterHTML do
 
   def greet(assigns) do
     ~H"""
-    <h2>Hello <strong>{@name}</strong>!</h2>
+    <div class="p-3 bg-parchment border-2 border-gray-700 rounded-sm mb-3 font-special-elite text-gray-900 shadow-sm">
+      <h2 class="text-2xl font-bold tracking-wide">
+        Greetings, <span class="underline decoration-wavy decoration-gray-600"><%= @name %></span>!
+      </h2>
+    </div>
     """
   end
 
@@ -15,19 +19,19 @@ defmodule IntoTheOddWeb.CharacterHTML do
 
   def list_stats(assigns) do
     ~H"""
-    <div>
-      <h3>Stats</h3>
-      <table>
-        <tr>
-          <th>Stat</th>
-          <th>Score</th>
-          <th>Description</th>
+    <div class="p-3 bg-parchment border-2 border-gray-700 rounded-sm mb-3 font-special-elite text-gray-900 shadow-sm">
+      <h3 class="text-lg font-bold mb-2 tracking-wide">Stats</h3>
+      <table class="w-full border-collapse">
+        <tr class="border-b border-gray-600">
+          <th class="text-left p-1">Stat</th>
+          <th class="text-left p-1">Score</th>
+          <th class="text-left p-1">Description</th>
         </tr>
         <%= for stat <- @stats do %>
           <tr>
-            <td><strong>{stat.label}</strong></td>
-            <td>{stat.val}</td>
-            <td><em>{stat.description}</em></td>
+            <td class="p-1 font-semibold">{stat.label}</td>
+            <td class="p-1">{stat.val}</td>
+            <td class="p-1 italic tracking-tight">{stat.description}</td>
           </tr>
         <% end %>
       </table>
@@ -39,8 +43,8 @@ defmodule IntoTheOddWeb.CharacterHTML do
 
   def hp(assigns) do
     ~H"""
-    <div>
-      <strong>HP:</strong> {@hp}
+    <div class="p-3 bg-parchment border-2 border-gray-700 rounded-sm mb-3 font-special-elite text-gray-900 shadow-sm">
+      <strong class="text-lg font-bold tracking-wide">HP:</strong> <span class="text-lg">{@hp}</span>
     </div>
     """
   end
@@ -49,9 +53,12 @@ defmodule IntoTheOddWeb.CharacterHTML do
 
   def arcana(assigns) do
     ~H"""
-    <div>
-      <h3>Arcana</h3>
-      <p>{@arcana["name"]}: {@arcana["description"]}</p>
+    <div class="p-3 bg-parchment border-2 border-gray-700 rounded-sm mb-3 font-special-elite text-gray-900 shadow-sm">
+      <h3 class="text-lg font-bold mb-2 tracking-wide">Arcana</h3>
+      <p>
+        <strong>{@arcana["name"]}:</strong>
+        <span class="tracking-tight">{@arcana["description"]}</span>
+      </p>
     </div>
     """
   end
@@ -60,19 +67,19 @@ defmodule IntoTheOddWeb.CharacterHTML do
 
   def list_weapons(assigns) do
     ~H"""
-    <div>
-      <h3>Weapons</h3>
-      <table>
-        <tr>
-          <th>Name</th>
-          <th>Damage</th>
-          <th>Tags</th>
+    <div class="p-3 bg-parchment border-2 border-gray-700 rounded-sm mb-3 font-special-elite text-gray-900 shadow-sm">
+      <h3 class="text-lg font-bold mb-2 tracking-wide">Weapons</h3>
+      <table class="w-full border-collapse">
+        <tr class="border-b border-gray-600">
+          <th class="text-left p-1">Name</th>
+          <th class="text-left p-1">Damage</th>
+          <th class="text-left p-1">Tags</th>
         </tr>
         <%= for weapon <- @weapons do %>
           <tr>
-            <td><strong>{weapon["name"]}</strong></td>
-            <td>{weapon["damage"]}</td>
-            <td><em>{weapon["tags"]}</em></td>
+            <td class="p-1 font-semibold">{weapon["name"]}</td>
+            <td class="p-1">{weapon["damage"]}</td>
+            <td class="p-1 italic tracking-tight">{weapon["tags"]}</td>
           </tr>
         <% end %>
       </table>
@@ -84,11 +91,13 @@ defmodule IntoTheOddWeb.CharacterHTML do
 
   def list_items(assigns) do
     ~H"""
-    <div>
-      <h3>Items</h3>
-      <%= for item <- @items do %>
-        {item}<br />
-      <% end %>
+    <div class="p-3 bg-parchment border-2 border-gray-700 rounded-sm mb-3 font-special-elite text-gray-900 shadow-sm">
+      <h3 class="text-lg font-bold mb-2 tracking-wide">Items</h3>
+      <div class="flex flex-col gap-1">
+        <%= for item <- @items do %>
+          <span class="tracking-tight">{item}</span>
+        <% end %>
+      </div>
     </div>
     """
   end
@@ -97,11 +106,13 @@ defmodule IntoTheOddWeb.CharacterHTML do
 
   def list_traits(assigns) do
     ~H"""
-    <div>
-      <h3>Traits</h3>
-      <%= for trait <- @traits do %>
-        {trait}<br />
-      <% end %>
+    <div class="p-3 bg-parchment border-2 border-gray-700 rounded-sm mb-3 font-special-elite text-gray-900 shadow-sm">
+      <h3 class="text-lg font-bold mb-2 tracking-wide">Traits</h3>
+      <div class="flex flex-col gap-1">
+        <%= for trait <- @traits do %>
+          <span class="tracking-tight">{trait}</span>
+        <% end %>
+      </div>
     </div>
     """
   end

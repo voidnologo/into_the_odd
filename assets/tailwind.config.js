@@ -12,11 +12,11 @@ module.exports = {
     "../lib/into_the_odd_web/**/*.*ex"
   ],
   theme: {
-    extend: {
-      colors: {
-        brand: "#FD4F00",
+      extend: {
+      fontFamily: {
+        'special-elite': ['Special Elite', 'monospace']
       }
-    },
+    }
   },
   plugins: [
     require("@tailwindcss/forms"),
